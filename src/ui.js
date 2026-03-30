@@ -1,11 +1,11 @@
 const UI = (() => {
 
-  let fab = null;          
-  let panel = null;        
-  let toast = null;        
-  let toastTimer = null;   
+  let fab = null;
+  let panel = null;
+  let toast = null;
+  let toastTimer = null;
   let isPanelOpen = false;
-  let lastResult = null;   
+  let lastResult = null;
 
   function showToast(message, type = 'success', duration = 3000) {
     if (!toast) return;
@@ -25,7 +25,7 @@ const UI = (() => {
       await navigator.clipboard.writeText(text);
       showToast(successMsg, 'success');
     } catch (err) {
-      
+
       const ta = document.createElement('textarea');
       ta.value = text;
       ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none;';
@@ -36,7 +36,7 @@ const UI = (() => {
       if (ok) {
         showToast(successMsg, 'success');
       } else {
-        showToast('⚠ Could not access clipboard.', 'error');
+        showToast('Could not access clipboard.', 'error');
       }
     }
   }
@@ -65,7 +65,7 @@ const UI = (() => {
 
       if (lastResult.count === 0) {
         setPanelStatus(
-          '⚠ No messages found. Try scrolling down and retrying.',
+          'No messages found. Try scrolling down and retrying.',
           'warning'
         );
         setFabState('idle');
@@ -78,7 +78,7 @@ const UI = (() => {
 
     } catch (err) {
       console.error('[AI Chat Extractor] Extraction error:', err);
-      setPanelStatus('⚠ Extraction failed. See console for details.', 'error');
+      setPanelStatus('Extraction failed. See console for details.', 'error');
       setFabState('idle');
     }
   }
@@ -153,11 +153,11 @@ const UI = (() => {
     el.className = 'ace-panel';
     el.id = 'ace-panel';
     el.setAttribute('role', 'dialog');
-    el.setAttribute('aria-label', 'AI Chat Extractor options');
+    el.setAttribute('aria-label', 'Chat Extractor Options');
 
     el.innerHTML = `
       <div class="ace-panel-header">
-        <span class="ace-panel-title">AI Chat Extractor</span>
+        <span class="ace-panel-title">Chat Extractor</span>
         <button class="ace-panel-close" aria-label="Close" title="Close">✕</button>
       </div>
 
@@ -165,32 +165,32 @@ const UI = (() => {
 
       <div class="ace-panel-actions">
         <button class="ace-btn ace-btn--primary" id="ace-btn-extract">
-          ⚡ Extract
+          Extract
         </button>
 
         <button class="ace-btn ace-btn--secondary" id="ace-btn-copy-text"
                 data-action="copy-text" disabled>
-          📋 Copy as Text
+          Copy as Text
         </button>
 
         <button class="ace-btn ace-btn--secondary" id="ace-btn-copy-md"
                 data-action="copy-md" disabled>
-          📋 Copy as Markdown
+          Copy as Markdown
         </button>
 
         <button class="ace-btn ace-btn--outline" id="ace-btn-dl-txt"
                 data-action="dl-txt" disabled>
-          ⬇ Download .txt
+          Download .txt
         </button>
 
         <button class="ace-btn ace-btn--outline" id="ace-btn-dl-md"
                 data-action="dl-md" disabled>
-          ⬇ Download .md
+          Download .md
         </button>
       </div>
 
       <p class="ace-panel-footer">
-        Works on ChatGPT · Claude · Gemini
+        Works on ChatGPT,Claude,Gemini
       </p>
     `;
 
@@ -242,7 +242,7 @@ const UI = (() => {
   }
 
   function init() {
-    
+
     if (document.getElementById('ace-fab')) return;
 
     const host = document.createElement('div');
@@ -250,7 +250,7 @@ const UI = (() => {
     host.style.cssText =
       'position:fixed;z-index:2147483647;bottom:0;right:0;pointer-events:none;';
 
-    fab   = createFab();
+    fab = createFab();
     panel = createPanel();
     toast = createToast();
 
