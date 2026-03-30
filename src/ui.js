@@ -77,7 +77,7 @@ const UI = (() => {
       enablePanelButtons();
 
     } catch (err) {
-      console.error('[AI Chat Extractor] Extraction error:', err);
+      console.error('[Chat Extractor] Extraction error:', err);
       setPanelStatus('Extraction failed. See console for details.', 'error');
       setFabState('idle');
     }
@@ -139,8 +139,8 @@ const UI = (() => {
     const btn = document.createElement('button');
     btn.className = 'ace-fab';
     btn.id = 'ace-fab';
-    btn.setAttribute('aria-label', 'AI Chat Extractor');
-    btn.setAttribute('title', 'AI Chat Extractor');
+    btn.setAttribute('aria-label', 'Chat Extractor');
+    btn.setAttribute('title', 'Chat Extractor');
     btn.innerHTML = `
       <span class="ace-fab-icon" aria-hidden="true">💬</span>
     `;

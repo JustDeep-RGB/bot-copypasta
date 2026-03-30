@@ -13,7 +13,7 @@ const ChatGPTExtractor = (() => {
     const turns = document.querySelectorAll(TURN_SELECTOR);
 
     if (turns.length === 0) {
-      console.warn('[AI Chat Extractor] ChatGPT: no message turns found.');
+      console.warn('[Chat Extractor] ChatGPT: no message turns found.');
       return [];
     }
 

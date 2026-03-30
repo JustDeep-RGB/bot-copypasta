@@ -2,9 +2,9 @@
 
 chrome.runtime.onInstalled.addListener(({ reason }) => {
   if (reason === 'install') {
-    console.info('[AI Chat Extractor] Extension installed.');
+    console.info('[Chat Extractor] Extension installed.');
   } else if (reason === 'update') {
-    console.info('[AI Chat Extractor] Extension updated.');
+    console.info('[Chat Extractor] Extension updated.');
   }
 });
 

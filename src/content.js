@@ -9,7 +9,7 @@
       return;
     }
 
-    console.info(`[AI Chat Extractor] Initialising on platform: ${platform}`);
+    console.info(`[Chat Extractor] Initialising on platform: ${platform}`);
 
     const observer = new MutationObserver(() => {
       if (!document.getElementById('ace-fab')) {

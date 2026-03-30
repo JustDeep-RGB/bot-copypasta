@@ -106,12 +106,12 @@ const ClaudeExtractor = (() => {
     for (const { name, fn } of strategies) {
       const result = fn();
       if (result.length > 0) {
-        console.info(`[AI Chat Extractor] Claude: extracted via "${name}" strategy.`);
+        console.info(`[Chat Extractor] Claude: extracted via "${name}" strategy.`);
         return result;
       }
     }
 
-    console.warn('[AI Chat Extractor] Claude: all strategies returned 0 messages.');
+    console.warn('[Chat Extractor] Claude: all strategies returned 0 messages.');
     return [];
   }
 

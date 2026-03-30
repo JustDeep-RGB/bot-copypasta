@@ -51,7 +51,7 @@ const Extractor = (() => {
     const platform = detectPlatform();
 
     if (!platform) {
-      console.warn('[AI Chat Extractor] Unsupported site.');
+      console.warn('[Chat Extractor] Unsupported site.');
       return { messages: [], plainText: '', markdown: '', platform: null, count: 0 };
     }
 
@@ -67,7 +67,7 @@ const Extractor = (() => {
     }
 
     if (messages.length === 0) {
-      console.warn('[AI Chat Extractor] No messages extracted.');
+      console.warn('[Chat Extractor] No messages extracted.');
     }
 
     const plainText = formatAsPlainText(messages);

@@ -153,12 +153,12 @@ const GeminiExtractor = (() => {
     for (const { name, fn } of strategies) {
       const result = fn();
       if (result.length > 0) {
-        console.info(`[AI Chat Extractor] Gemini: extracted via "${name}" strategy.`);
+        console.info(`[Chat Extractor] Gemini: extracted via "${name}" strategy.`);
         return result;
       }
     }
 
-    console.warn('[AI Chat Extractor] Gemini: all strategies returned 0 messages.');
+    console.warn('[Chat Extractor] Gemini: all strategies returned 0 messages.');
     return [];
   }
 

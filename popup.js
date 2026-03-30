@@ -19,7 +19,7 @@
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     activeTab = tab;
   } catch (e) {
-    console.error('[AI Chat Extractor] Could not query active tab:', e);
+    console.error('[Chat Extractor] Could not query active tab:', e);
   }
 
   const banner   = document.getElementById('status-banner');

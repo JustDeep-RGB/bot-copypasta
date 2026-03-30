@@ -1,4 +1,4 @@
-# AI Chat Extractor 💬
+# Chat Extractor 💬
 
 A production-ready Chrome Extension (Manifest V3) to extract clean, structured chat conversations from AI platforms (ChatGPT, Claude, and Google Gemini) and copy them to your clipboard or download them as Markdown/Text files.
 
@@ -29,15 +29,15 @@ A production-ready Chrome Extension (Manifest V3) to extract clean, structured c
     *   **Chrome**: `chrome://extensions`
 3.  Enable **"Developer mode"** (usually a toggle in the top-right corner).
 4.  Click the **"Load unpacked"** button.
-5.  Select the root folder of this project (`/home/jasd/Documents/bot-extension`).
-6.  The **AI Chat Extractor** icon should now appear in your extensions list.
+5.  Select the root folder of this project (the directory where you cloned/downloaded it).
+6.  The **Chat Extractor** icon should now appear in your extensions list.
 
 ## 📖 How to Use
 
 1.  Open any supported AI platform (e.g., [chatgpt.com](https://chatgpt.com)).
 2.  Start or open an existing chat conversation.
 3.  Look for the **purple 💬 floating button** in the bottom-right corner of the page.
-4.  Click the button to open the **AI Chat Extractor** panel.
+4.  Click the button to open the **Chat Extractor** panel.
 5.  Click **⚡ Extract**. The extension will briefly scroll through your chat to ensure all messages are loaded.
 6.  Once extraction is complete, click:
     *   **📋 Copy as Text**: Copies to clipboard in plain text.
