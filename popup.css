@@ -1,0 +1,169 @@
+/*
+ * popup.css
+ * Styles for the extension popup window.
+ */
+
+:root {
+  --bg: #1e1e2e;
+  --surface: #24243e;
+  --border: rgba(255, 255, 255, 0.07);
+  --accent: #6366f1;
+  --accent-dim: rgba(99, 102, 241, 0.15);
+  --text: #cdd6f4;
+  --text-muted: #585b70;
+  --green: #a6e3a1;
+  --red: #f38ba8;
+  --yellow: #f9e2af;
+  --blue: #89b4fa;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 300px;
+  min-height: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ─── Popup shell ──────────────────────────────────────────────────────────── */
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+}
+
+/* ─── Header ───────────────────────────────────────────────────────────────── */
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.popup-logo {
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.popup-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+.popup-subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ─── Status banner ─────────────────────────────────────────────────────────── */
+
+.status-banner {
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.status-banner--info    { background: rgba(137, 180, 250, 0.12); color: var(--blue);   border-left: 3px solid var(--blue);   }
+.status-banner--success { background: rgba(166, 227, 161, 0.12); color: var(--green);  border-left: 3px solid var(--green);  }
+.status-banner--warning { background: rgba(249, 226, 175, 0.12); color: var(--yellow); border-left: 3px solid var(--yellow); }
+.status-banner--error   { background: rgba(243, 139, 168, 0.12); color: var(--red);    border-left: 3px solid var(--red);   }
+
+/* ─── Platforms ─────────────────────────────────────────────────────────────── */
+
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.platform-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.platform-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.platform-item.active {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.platform-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.platform-item.active .platform-dot {
+  background: var(--green);
+  box-shadow: 0 0 6px var(--green);
+}
+
+/* ─── Instructions ──────────────────────────────────────────────────────────── */
+
+.instructions {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.instructions strong {
+  color: var(--text);
+}
+
+.mt-4 { margin-top: 6px; }
+
+/* ─── Footer ────────────────────────────────────────────────────────────────── */
+
+.popup-footer {
+  text-align: center;
+  font-size: 10.5px;
+  color: var(--text-muted);
+  padding-top: 2px;
+  border-top: 1px solid var(--border);
+}

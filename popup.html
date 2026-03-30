@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chat Extractor</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup">
+
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="popup-logo" aria-hidden="true">💬</div>
+      <div>
+        <h1 class="popup-title">AI Chat Extractor</h1>
+        <p class="popup-subtitle">Extract clean chats from AI platforms</p>
+      </div>
+    </header>
+
+    <!-- Status banner (shown when on a supported/unsupported site) -->
+    <div id="status-banner" class="status-banner status-banner--info" role="status" aria-live="polite">
+      Checking current page…
+    </div>
+
+    <!-- Supported platforms list -->
+    <section class="platforms">
+      <h2 class="section-label">Supported Platforms</h2>
+      <ul class="platform-list" id="platform-list">
+        <li class="platform-item" data-host="chatgpt">
+          <span class="platform-dot" aria-hidden="true"></span>
+          ChatGPT
+        </li>
+        <li class="platform-item" data-host="claude">
+          <span class="platform-dot" aria-hidden="true"></span>
+          Claude
+        </li>
+        <li class="platform-item" data-host="gemini">
+          <span class="platform-dot" aria-hidden="true"></span>
+          Google Gemini
+        </li>
+      </ul>
+    </section>
+
+    <!-- Instructions / CTA -->
+    <section class="instructions" id="instructions-section">
+      <p>
+        Open a conversation on any supported platform and look for the
+        <strong>💬</strong> floating button in the bottom-right corner.
+      </p>
+      <p class="mt-4">Click it to open the extractor panel and choose your export format.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="popup-footer">
+      <span>AI Chat Extractor v1.0</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
