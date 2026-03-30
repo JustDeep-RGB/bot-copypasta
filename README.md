@@ -74,5 +74,4 @@ A production-ready Chrome Extension (Manifest V3) to extract clean, structured c
 *   Modular and maintainable code structure.
 *   Shadow DOM-like isolation for styles to avoid site interference.
 
----
-Created by Antigravity AI Coding Assistant.
+
